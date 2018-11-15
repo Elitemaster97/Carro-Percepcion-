@@ -1,0 +1,56 @@
+int d1 =2;
+int d2 =4;
+int i1 =3;
+int i2 =5;
+
+void setup() {
+  Serial.begin(9600);
+pinMode(d1,OUTPUT);
+pinMode(d2,OUTPUT);
+pinMode(i1,OUTPUT);
+pinMode(i2,OUTPUT);
+}
+
+
+void AbanzarD() {
+
+    digitalWrite(d1,HIGH);     //Abanza
+    digitalWrite(i1,LOW);
+    delay(5000);
+    digitalWrite(d1,LOW);
+    digitalWrite(i1,LOW);
+   
+    
+  
+}
+
+void ReberzaD() {
+  digitalWrite(d1,LOW);     //Abanza
+    digitalWrite(i1,HIGH);
+    delay(5000);
+    digitalWrite(d1,LOW);
+    digitalWrite(i1,LOW);
+    
+}
+
+
+
+void loop() {
+    AbanzarD();
+    ReberzaD();
+}
+
+
+
+// digitalWrite(d1,HIGH);     //Abanza
+  //  digitalWrite(i1,LOW);
+   // delay(5000);
+   // digitalWrite(d1,LOW);     //Reberza
+   // digitalWrite(i1,HIGH);
+   // delay(5000);
+   // digitalWrite(d2,HIGH);     //Abanza
+   // digitalWrite(i2,LOW);
+   // delay(5000);
+   // digitalWrite(d2,LOW);     //Reberza
+   // digitalWrite(i2,HIGH);
+   // delay(5000);
